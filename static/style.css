@@ -1,0 +1,111 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* Background */
+body {
+    background: linear-gradient(135deg, #1e3c72, #2a5298, #6fa3ef);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Main Container Card */
+.container {
+    background: #ffffff;
+    padding: 40px;
+    width: 450px;
+    border-radius: 12px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+/* Title */
+h1 {
+    text-align: center;
+    color: #2a5298;
+    margin-bottom: 10px;
+}
+
+/* Subtitle */
+.subtitle {
+    text-align: center;
+    color: #555;
+    margin-bottom: 30px;
+    font-size: 14px;
+}
+
+/* Form Group */
+.form-group {
+    margin-bottom: 25px;
+}
+
+/* Labels */
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #1565c0;
+    background-color: #eef5ff;
+    padding: 6px 10px;
+    border-radius: 4px;
+}
+
+/* Inputs */
+input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    background-color: #fdfdfd;
+    transition: 0.3s;
+}
+
+input:focus {
+    border-color: #2a5298;
+    outline: none;
+    box-shadow: 0 0 8px rgba(42, 82, 152, 0.4);
+    background-color: #e3f2fd;
+}
+
+/* Button */
+button {
+    width: 100%;
+    padding: 14px;
+    background: #2a5298;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #1e3c72;
+}
+
+/* Result Box */
+.result {
+    margin-top: 30px;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.result.low {
+    background: #c8e6c9; /* Green for low risk */
+    color: #2e7d32;
+}
+
+.result.high {
+    background: #ffcdd2; /* Red for high risk */
+    color: #c62828;
+}

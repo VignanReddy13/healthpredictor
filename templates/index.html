@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Health Risk Prediction System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <div class="container">
+        <h1>🩺 Health Risk Prediction System</h1>
+        <p class="subtitle">Enter your medical parameters below</p>
+
+        <!-- Input Form -->
+        <form action="/predict" method="post" class="input-form">
+            <div class="form-group">
+                <label>Pregnancies</label>
+                <input type="number" name="Pregnancies" required>
+            </div>
+            <div class="form-group">
+                <label>Glucose</label>
+                <input type="number" name="Glucose" required>
+            </div>
+            <div class="form-group">
+                <label>Blood Pressure</label>
+                <input type="number" name="BloodPressure" required>
+            </div>
+            <div class="form-group">
+                <label>Skin Thickness</label>
+                <input type="number" name="SkinThickness" required>
+            </div>
+            <div class="form-group">
+                <label>Insulin</label>
+                <input type="number" name="Insulin" required>
+            </div>
+            <div class="form-group">
+                <label>BMI</label>
+                <input type="number" step="0.1" name="BMI" required>
+            </div>
+            <div class="form-group">
+                <label>Diabetes Pedigree Function</label>
+                <input type="number" step="0.01" name="DiabetesPedigreeFunction" required>
+            </div>
+            <div class="form-group">
+                <label>Age</label>
+                <input type="number" name="Age" required>
+            </div>
+
+            <button type="submit">Predict Risk</button>
+        </form>
+
+        <!-- Result Form -->
+        {% if prediction_text %}
+        <div class="result-card">
+            <h2>Prediction Result</h2>
+            <table>
+                <tr>
+                    <td><strong>Pregnancies:</strong></td>
+                    <td>{{ request.form.Pregnancies }}</td>
+                </tr>
+                <tr>
+                    <td><strong>Glucose:</strong></td>
+                    <td>{{ request.form.Glucose }}</td>
+                </tr>
+                <tr>
+                    <td><strong>Blood Pressure:</strong></td>
+                    <td>{{ request.form.BloodPressure }}</td>
+                </tr>
+                <tr>
+                    <td><strong>Skin Thickness:</strong></td>
+                    <td>{{ request.form.SkinThickness }}</td>
+                </tr>
+                <tr>
+                    <td><strong>Insulin:</strong></td>
+                    <td>{{ request.form.Insulin }}</td>
+                </tr>
+                <tr>
+                    <td><strong>BMI:</strong></td>
+                    <td>{{ request.form.BMI }}</td>
+                </tr>
+                <tr>
+                    <td><strong>Diabetes Pedigree Function:</strong></td>
+                    <td>{{ request.form.DiabetesPedigreeFunction }}</td>
+                </tr>
+                <tr>
+                    <td><strong>Age:</strong></td>
+                    <td>{{ request.form.Age }}</td>
+                </tr>
+                <tr class="final-row">
+                    <td><strong>Risk Level:</strong></td>
+                    <td class="{% if 'Low' in prediction_text %}low{% else %}high{% endif %}">
+                        {{ prediction_text }}
+                    </td>
+                </tr>
+            </table>
+        </div>
+        {% endif %}
+    </div>
+
+</body>
+</html>

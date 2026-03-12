@@ -1,0 +1,117 @@
+body {
+    background: linear-gradient(135deg, #1e3c72, #2a5298, #6fa3ef);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.container {
+    background: #ffffff;
+    padding: 40px;
+    width: 600px;
+    border-radius: 12px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    text-align: center;
+    color: #2a5298;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    text-align: center;
+    color: #555;
+    margin-bottom: 30px;
+    font-size: 14px;
+}
+
+/* Form styling */
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-weight: 600;
+    color: #1565c0;
+    margin-bottom: 6px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    background-color: #fdfdfd;
+    transition: 0.3s;
+}
+
+input:focus {
+    border-color: #2a5298;
+    background-color: #eef5ff;
+    outline: none;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background: #2a5298;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #1e3c72;
+}
+
+/* Result card */
+.result-card {
+    margin-top: 30px;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.result-card h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #2a5298;
+}
+
+.result-card table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.result-card td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.final-row td {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.low {
+    color: #2e7d32;
+    background-color: #c8e6c9;
+    padding: 6px;
+    border-radius: 4px;
+}
+
+.high {
+    color: #c62828;
+    background-color: #ffcdd2;
+    padding: 6px;
+    border-radius: 4px;
+}
